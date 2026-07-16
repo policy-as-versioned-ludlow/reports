@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reports
+  namespace: default
+  labels:
+    mycompany.com/policy-version: "2.0.0"
+    department: analytics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reports
+  template:
+    metadata:
+      labels:
+        app: reports
+        mycompany.com/policy-version: "2.0.0"
+        department: analytics
+    spec:
+      containers:
+        - name: reports
+          image: ghcr.io/policy-as-versioned-flux/reports@sha256:36dc3d7d1bd5193f46a55d57b505beb5e99d7925f65b0fad3c1f7d1aeafefcf5 # v1.0.0
+          ports:
+            - containerPort: 8080
