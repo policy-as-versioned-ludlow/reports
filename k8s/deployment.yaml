@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     mycompany.com/policy-version: "2.0.0"
-    department: analytics
+    department: engineering
 spec:
   replicas: 1
   selector:
@@ -16,7 +16,7 @@ spec:
       labels:
         app: reports
         mycompany.com/policy-version: "2.0.0"
-        department: analytics
+        department: engineering
     spec:
       containers:
         - name: reports
