@@ -4,7 +4,7 @@
 # (that's ledger), not current (that's api) -- the middle case.
 Flask==1.1.4
 Jinja2==2.11.3
-Werkzeug==1.0.1
+Werkzeug==3.1.9
 itsdangerous==1.1.0
 MarkupSafe==1.1.1
 click==7.1.2
